@@ -7,11 +7,11 @@
     else { 
     usrbtn.addEventListener("click",function(event) {
         console.log(event.target.id);
-        let usrprompt = (event.target.id === "usrbtn")? prompt("4글 이상 입력하세요."):null;
+        let usrprompt = (event.target.id === "usrbtn")? prompt("4 글자 이상 입력하세요."):null;
         if (usrprompt === null) {
             window.alert("입력 좀 하시지요.")
         } else if(usrprompt.length >= 4) {
-            window.alert("4글지 이상 입력하였습니다.")
+            window.alert("4글자 이상 입력하였습니다.")
         } else {
             window.alert("4글자 이하 입력하였습니다.")
         }
