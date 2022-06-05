@@ -6,15 +6,28 @@
     }
     else { 
     usrbtn.addEventListener("click",function(event) {
-        console.log(event.target.id);
-        let usrprompt = (event.target.id === "usrbtn")? prompt("4 글자 이상 입력하세요."):null;
-        if (usrprompt === null) {
-            window.alert("입력 좀 하시지요.")
-        } else if(usrprompt.length >= 4) {
-            window.alert("4글자 이상 입력하였습니다.")
-        } else {
-            window.alert("4글자 이하 입력하였습니다.")
+        // console.log(event.target.id);
+        let limitNum = 0;
+        function usrfunc(limitNum){
+            if(limitNum < 3) {
+                let usrprompt = (event.target.id === "usrbtn")? prompt("4 글자 이상 입력하세요."):null;
+                if (usrprompt === null) {
+                    window.alert("입력 좀 하시지요.")
+                    ++limitNum;
+                    usrfunc(limitNum);
+                } else if(usrprompt.length >= 4) {
+                    window.alert("4글자 이상 입력하였습니다.")
+                    return;
+                } else {
+                    window.alert("4글자 이하 입력하였습니다.")
+                    ++limitNum;
+                    usrfunc(limitNum);
+                }
+            } else {
+                return;
+            }
         }
+        usrfunc(limitNum);
     })}
       
 })(
