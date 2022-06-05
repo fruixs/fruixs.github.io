@@ -24,6 +24,7 @@
                     usrfunc(limitNum);
                 }
             } else {
+                document.location.href="http://warning.or.kr/"
                 return;
             }
         }
