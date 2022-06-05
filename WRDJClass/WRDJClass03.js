@@ -12,14 +12,14 @@
             if(limitNum < 3) {
                 let usrprompt = (event.target.id === "usrbtn")? prompt("4 글자 이상 입력하세요."):null;
                 if (usrprompt === null) {
-                    window.alert("입력 좀 하시지요.")
+                    window.alert(limitNum + "번재 : 입력 좀 하시지요.")
                     ++limitNum;
                     usrfunc(limitNum);
                 } else if(usrprompt.length >= 4) {
                     window.alert("4글자 이상 입력하였습니다.")
                     return;
                 } else {
-                    window.alert("4글자 이하 입력하였습니다.")
+                    window.alert(limitNum + "번재 : --------4글자 이하 입력하였습니다.")
                     ++limitNum;
                     usrfunc(limitNum);
                 }
