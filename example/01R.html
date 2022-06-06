@@ -37,6 +37,16 @@
             width:90%;
             margin:1% auto;
         }
+        div .content .emailcheck {
+            display: inline;
+        }
+        @media ( max-width:768px ) {
+            div .content .emailcheck {
+                display: block;
+                width: 40%;
+                margin: 1% auto;
+            }
+        }
         .usrlabel {
             display: inline-block;
             width: 34%;
@@ -110,8 +120,10 @@
                 <div class="email">
                     <label for="usremail"><span class="usrlabel">메일 계정</span></label>
                     <input name="email" id="usremail" type="email">
-                    <input name="emailcheck" id="emailchk" type="checkbox">
-                    <label for="emailchk">이메일 수신 여부</label>
+                    <div class="emailcheck">
+                        <input name="emailcheck" id="emailcheck" type="checkbox">
+                        <label for="emailchk">이메일 수신 여부</label>
+                    </div>
                 </div>
                 <div class="agree">
                     <h2>개인 정보 수집에 관한 약관 동의 여부</h2>
