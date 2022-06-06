@@ -10,16 +10,25 @@
             font-size: 14px;
             font-family: Roboto, Arial, sans-serif;
         }
-        div.wraper {
+        div .wraper {
         width: 100%;
         
         }
-        div.content {
+        div .content {
             font-size: 1.5rem;
             width: 50%;
             margin:5% auto;
             background-color: aliceblue;
             border: solid salmon 1px;
+        }
+        @media ( max-width:768px )  {
+            div .content {
+            font-size: 1.0rem;
+            width: 90%;
+            margin:0px auto;
+            background-color: aliceblue;
+            border: solid salmon 1px;
+            }
         }
         div .content .id,
         div .content .pw,
