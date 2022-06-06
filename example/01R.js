@@ -18,14 +18,14 @@
         })
         console.log(usragree2)
         usragree2.addEventListener("click",function(){
-            let agreelist = document.querySelectorAll("#agree11, #agree21");
+            let agreelist = document.querySelectorAll("#agree11, #agree22");
             agreelist.forEach(element => {
                 if(element.id === "agree11"){
                     console.log(element)
                     element.checked = true;
                 } else {
                     console.log(element)
-                    element.checked = false;
+                    element.checked = true;
                 }
             })
         })

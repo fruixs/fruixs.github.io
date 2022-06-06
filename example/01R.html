@@ -74,11 +74,13 @@
             counter-reset: pnum;
         }
         div .agreecnt > p::before {
-            content: counter(pnum) " 항";
+            content: counter(pnum) ".   ";
             counter-increment: pnum 1;
         }
         div .agreecnt > p {
             margin-left: 10%;
+            margin-top: 2px;
+            margin-bottom: 2px;
         }
     </style>
     <script type="text/javascript" defer src="./01R.js"></script>
@@ -98,13 +100,14 @@
                 </div>
                 <div class="email">
                     <label for="usremail"><span class="usrlabel">메일 계정</span></label>
-                    <input name="email" id="usremmail" type="email">
+                    <input name="email" id="usremail" type="email">
                     <input name="emailcheck" id="emailchk" type="checkbox">
                     <label for="emailchk">이메일 수신 여부</label>
                 </div>
                 <div class="agree">
                     <h2>개인 정보 수집에 관한 약관 동의 여부</h2>
                     <div class="agreecnt">
+                        <a id="#agree1up" href="#agree1down" target="_self">약관 맨 끝으로</a>
                         <h3> ( 제목 )</h3>
                         <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
                         <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
@@ -121,6 +124,7 @@
                         <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
                         <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
                         <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <a id="#agree1down" href="#agree1up" target="_self">약관 맨 위로</a>
                     </div>
                     <div class="agreecntchck">
                         <input type="radio" name="agree10" id="agree11">
