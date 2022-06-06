@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 토요일 HTML5/CSS/JS 모임</title>
+    <style>
+        html {
+            font-size: 14px;
+            font-family: Roboto, Arial, sans-serif;
+        }
+        div.wraper {
+        width: 100%;
+        
+        }
+        div.content {
+            font-size: 1.5rem;
+            width: 50%;
+            margin:5% auto;
+            background-color: aliceblue;
+            border: solid salmon 1px;
+        }
+        div .content .id,
+        div .content .pw,
+        div .content .email,
+        div .content .submit {
+            width:90%;
+            margin:1% auto;
+        }
+        .usrlabel {
+            display: inline-block;
+            width: 34%;
+        }
+        input {
+            vertical-align:middle;
+            border: solid salmon 1px;
+            height: 24px;
+        }
+        input[type="submit"] {
+            width: 100px;
+            height: 30px;
+            display:block;
+            margin: 1% auto;
+        }
+        .agree {
+            width:90%;
+            margin:0px auto;
+        }
+        h1, h2 {
+            text-align: center;
+            color:cornflowerblue ;
+        }
+        div .agreecnt {
+            border: solid cornflowerblue 1px;
+            background-color:aliceblue;
+            width:90%;
+            height: 70px;
+            margin: 0px auto;
+            overflow-y: scroll;
+        }
+        div .agreecntchck {
+            width: 85%;
+            margin: 10px auto;
+        }
+        div .agreecnt {
+            counter-reset: hnum;
+        }
+        div .agreecnt > h3::before {
+            content: "제 " counter(hnum) " 조";
+            counter-increment: hnum 1;
+        }
+        div .agreecnt > h3 {
+            counter-reset: pnum;
+        }
+        div .agreecnt > p::before {
+            content: counter(pnum) " 항";
+            counter-increment: pnum 1;
+        }
+        div .agreecnt > p {
+            margin-left: 10%;
+        }
+    </style>
+    <script type="text/javascript" defer src="./01R.js"></script>
+</head>
+<body>
+    <div class="wraper">
+        <div class="content">
+            <h1>회원 가입 양식</h1>
+            <form action="">
+                <div class="id">
+                    <span class="usrlabel"><label for="usrid">사용자 아이디</label></span>
+                    <input name="id" id="usrid" type="text">
+                </div>
+                <div class="pw">
+                    <label for="usrpw"><span class="usrlabel">사용자 비밀번호</span></label>
+                    <input name="pw" id="usrpw" type="password">
+                </div>
+                <div class="email">
+                    <label for="usremail"><span class="usrlabel">메일 계정</span></label>
+                    <input name="email" id="usremmail" type="email">
+                    <input name="emailcheck" id="emailchk" type="checkbox">
+                    <label for="emailchk">이메일 수신 여부</label>
+                </div>
+                <div class="agree">
+                    <h2>개인 정보 수집에 관한 약관 동의 여부</h2>
+                    <div class="agreecnt">
+                        <h3> ( 제목 )</h3>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <h3> ( 제목 )</h3>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <h3> ( 제목 )</h3>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <h3> ( 제목 )</h3>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                    </div>
+                    <div class="agreecntchck">
+                        <input type="radio" name="agree10" id="agree11">
+                        <label for="agree11">동의 함</label>
+                        <input type="radio" name="agree10" id="agree12">
+                        <label for="agree12">동의 하지 않음</label>
+                    </div>
+                </div>
+                <div class="agree">
+                    <h2>마케팅 정보 수신 동의 여부</h2>
+                    <div class="agreecnt">
+                        <h3> ( 제목 )</h3>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <h3> ( 제목 )</h3>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <h3> ( 제목 )</h3>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <h3> ( 제목 )</h3>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                        <p> 가 나 다 라 마 바 사 아 자 차 아 카 타 파 하</p>
+                    </div>
+                    <div class="agreecntchck">
+                        <input type="radio" name="agree20" id="agree21">
+                        <label for="agree21">동의 함</label>
+                        <input type="radio" name="agree20" id="agree22">
+                        <label for="agree22">동의 하지 않음</label>
+                    </div>
+                    <div class="agreecntchck">
+                        <input type="radio" name="agree30" id="agree31" required>
+                        <label for="agree31"><strong>전체 동의 함</strong></label>
+                        <input type="radio" name="agree30" id="agree32" required>
+                        <label for="agree32"><strong>필수 약관 동의함</strong></label>
+                    </div>
+                </div>
+                <div class="submit">
+                    <input id="usrsubmit" type="submit" value="가입하기">
+                    <!-- <input id="usrsubmit" type="submit" value="가입하기"> -->
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
