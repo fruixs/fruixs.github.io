@@ -3,3 +3,4 @@
 * [우리동작 오픈소스 프로그래밍 03회차](./WRDJClass/03강.html)
 * [회원 가입 양식 만들기](./example/01R.html)
 * [for 문으로 table 만들기](./WRDJClass/create-table-for.html)
+* [우리동작 오픈소스 프로그래밍 05회차](./WRDJClass/05강.html)
