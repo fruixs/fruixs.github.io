@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <met2a http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2022. 06. 18 우리동작 HTML&Javascript</title>
+        <script src="./05강.js" type="text/javascript"></script>
+        <style>
+            .wrap {
+                margin: 5% auto 1% auto;
+                width: 90%;
+                color: white;
+            }
+
+            body {
+                background-color: black;
+            }
+
+            button {
+                border: solid whitesmoke 2px;
+                background-color: black;
+                color: whitesmoke;
+                height: 25px;
+            }
+
+            input[type="text"] {
+                border: solid whitesmoke 2px;
+                background-color: black;
+                color: whitesmoke;
+                height: 20px;
+                line-height: 20px;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>2022. 06. 18 우리동작 HTML&Javascript</h1>
+
+        <h2>1. 최대값과 최소값 구하기</h2>
+        <label for="NumberArray">숫자 배열 입력</label>
+        <input id="NumberArray" type="text" placeholder="콤마(,)로 구분하여 입력하세요.">
+        <button onclick="NumberCompare()">최대값, 최소값 구하기</button>
+        
+        <h2>2. 문자열의 특정 문자 개수 세기</h2>
+        <label for="TargetString1">문자열 입력</label>
+        <input id="TargetString1" type="text">
+        <label for="SeperateString">구분 문자열 입력</label>
+        <input id="SeperateString" type="text">
+        <button onclick="getCharNum()">특적 문자열 세기</button>
+        
+        <h2>3. 숫자 A와 숫자 B 사이 숫자들의 합 </h2>
+        <label for="NumberStrA">숫자 A 입력</label>
+        <input id="NumberStrA" type="text">
+        <label for="NumberStrB">숫자 B 입력</label>
+        <input id="NumberStrB" type="text">
+        <button onclick="NumToNumSum()">숫자들의 합 보기</button>
+
+        <h2>4. 문자열 거꾸로 하기</h2>
+        <label for="TargetStr2">문자열 입력</label>
+        <input id="TargetStr2" type="text">
+        <button onclick="reverseString()">문자열 거꾸로 하기</button>
+    </div>
+</body>
+
+</html
