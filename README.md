@@ -5,3 +5,4 @@
 * [for 문으로 table 만들기](./WRDJClass/create-table-for.html)
 * [우리동작 오픈소스 프로그래밍 05회차](./WRDJClass/05강.html)
 * [복잡한 표 접근성 적용하기](./example/complex-table.html)
+* [CSS float 속성을 활용한 메뉴 만들기](./example/float-menu.html)
