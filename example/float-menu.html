@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title> 메뉴 만들기 </title>
+    <style>
+        .menu {
+            width:90%;
+            height:10%;
+            border:solid black 1px;
+            margin:30px auto;
+        }
+        .menu>ul {
+            position: relative;
+            width: 50%;
+            /* border:solid black 1px; */
+            margin:0px auto;
+        }
+        .menu>ul>li {
+            float:left;
+            list-style: none;
+        }
+        .menu ul ul {
+            position: relative;
+            top:50%;
+            left:-30%;
+            display: none;
+        }
+        .menu li:hover>ul {
+            display: block;
+            margin-top: 10px;
+            list-style: none;
+        }
+        .menu>ul>li>span {
+            color:palevioletred;
+            font-size: larger;
+        }
+        .menu>ul>li:first-child {
+            margin-right: 50px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        .menu>ul>li:last-child {
+            margin-left: 50px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        /* floating 하면 부모 요소가 inline-block 으로 인식된다. */
+        /* 따라서 아래처럼 적용해야 가로 세로를 인식하는 블럭 요소가 된다. */
+        .menu>ul::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li><span>메뉴 1</span>
+                <ul>
+                    <li>메뉴 1의 1</li>
+                    <li>메뉴 1의 2</li>
+                </ul>
+            </li>
+            <li><span>메뉴 2</span>
+                <ul>
+                    <li>메뉴 2이 1</li>
+                    <li>메뉴 2이 2</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
