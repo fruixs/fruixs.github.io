@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko-KR">
 
 <head>
     <meta charset="UTF-8">
@@ -34,6 +34,11 @@
             margin-top: 10px;
             list-style: none;
         }
+        .menu>ul>li:focus-within>ul {
+            display: block;
+            margin-top: 10px;
+            list-style: none;
+        }
         .menu>ul>li>span {
             color:palevioletred;
             font-size: larger;
@@ -61,16 +66,16 @@
 <body>
     <div class="menu">
         <ul>
-            <li><span>메뉴 1</span>
+            <li><a href="#">메뉴 1</a>
                 <ul>
-                    <li>메뉴 1의 1</li>
-                    <li>메뉴 1의 2</li>
+                    <li><a href="#">메뉴 1의 1</a></li>
+                    <li><a href="#">메뉴 1의 2</a></li>
                 </ul>
             </li>
-            <li><span>메뉴 2</span>
+            <li><a href="#">메뉴 2</a>
                 <ul>
-                    <li>메뉴 2이 1</li>
-                    <li>메뉴 2이 2</li>
+                    <li><a href="#">메뉴 2이 1</a></li>
+                    <li><a href="#">메뉴 2이 2</a></li>
                 </ul>
             </li>
         </ul>
