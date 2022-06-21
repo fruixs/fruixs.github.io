@@ -22,11 +22,12 @@
         .menu>ul>li {
             float:left;
             list-style: none;
+            position: relative;
         }
         .menu ul ul {
-            position: relative;
+            position: absolute;
             top:50%;
-            left:-30%;
+            left:-40px;
             width: 1px;
             height: 1px;
             margin: -1px;
@@ -34,19 +35,34 @@
             overflow: hidden;
         }
         .menu li:hover>ul {
+            position: absolute;
             display: block;
-            margin-top: 10px;
+            margin-top: 15px;
             list-style: none;
+            clip-path: none;
+            width: max-content;
+            height: 100%;
+            overflow: unset;
+        }
+        .menu>ul>li:nth-child(2):hover>ul {
+            position: absolute;
+            display: block;
+            margin-top: 15px;
+            list-style: none;
+            clip-path: none;
+            width: max-content;
+            height: 100%;
+            overflow: unset;
+            overflow-wrap: ;
         }
         /* overflow에 unset() 을 주어 지정한 hidden 속성 해제 */
         /* 아래 내용은 스크린리더의 접근성을 지키면서 디자인을 지키기 위한 trick 이다. */
         .menu>ul>li:focus-within>ul {
             display: block;
-            margin-top: 10px;
             list-style: none;
-            margin: auto;
+            margin-top: 15px;
             clip-path: none;
-            width: 100%;
+            width: 200%;
             height: 100%;
             overflow: unset;
         }
