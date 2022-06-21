@@ -57,17 +57,19 @@
             /* overflow에 unset() 을 주어 지정한 hidden 속성 해제 */
             /* 아래 내용은 스크린리더의 접근성을 지키면서 디자인을 지키기 위한 trick 이다. */
             .menu>ul>li:focus-within>ul {
+                position: absolute;
                 display: block;
                 list-style: none;
                 margin-top: 15px;
                 clip-path: none;
-                width: 200%;
+                width: max-content;
                 height: 100%;
                 overflow: unset;
             }
-            .menu>ul>li>span {
+            .menu a {
                 color:palevioletred;
-                font-size: larger;
+                font-size: 18pt;
+                text-decoration: none;
             }
             .menu>ul>li:first-child {
                 margin-right: 50px;
@@ -86,8 +88,11 @@
                 display: block;
                 clear: both;
             }
-            .menu>h1,p {
+            .menu>h1, p {
                 text-align: center;
+            }
+            p {
+                font-size: 14pt;
             }
         </style>
     </head>
@@ -107,7 +112,7 @@
                         <li><a href="./example/float-menu.html">CSS float 속성을 활용한 메뉴 만들기</a></li>
                     </ul>
                 </li>
-                <li><a href="#">림크</a>
+                <li><a href="#">링크</a>
                     <ul>
                         <li><a href="#">작업 중인 메뉴 2의 1</a></li>
                         <li><a href="#">작업 중인 메뉴 2의 2</a></li>
