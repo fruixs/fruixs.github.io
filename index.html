@@ -83,12 +83,13 @@
             }
             /* floating 하면 부모 요소가 inline-block 으로 인식된다. */
             /* 따라서 아래처럼 적용해야 가로 세로를 인식하는 블럭 요소가 된다. */
+            /* floating 하면 부모 요소가 높이를 인식하지 못 하므로 조심해야 한다.*/
             .menu>ul::after {
                 content: "";
                 display: block;
                 clear: both;
             }
-            .menu>h1, p {
+            .menu>h1, h2, p {
                 text-align: center;
             }
             p {
@@ -102,7 +103,7 @@
             <h1>2022 정보접근성 시각 분야 관련 자료</h1>
             <p>여기에 관련 법률 및 소스 코드와 레퍼런스, 컨퍼런스 자료가 올라 옵니다.</p>
             <ul>
-                <li><a href="#">우리 동작 및 토요일 수업 자료</a>
+                <li><h2>우리 동작 및 토요일 수업 자료</h2>
                     <ul>
                         <li><a href="./WRDJClass/03강.html">우리동작 오픈소스 프로그래밍 03회차</a></li>
                         <li><a href="./WRDJClass/05강.html">우리동작 오픈소스 프로그래밍 05회차</a></li>
@@ -112,7 +113,7 @@
                         <li><a href="./example/float-menu.html">CSS float 속성을 활용한 메뉴 만들기</a></li>
                     </ul>
                 </li>
-                <li><a href="#">링크</a>
+                <li><h2>링크</h1>
                     <ul>
                         <li><a href="#">작업 중인 메뉴 2의 1</a></li>
                         <li><a href="#">작업 중인 메뉴 2의 2</a></li>
