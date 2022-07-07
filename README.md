@@ -1,3 +1,8 @@
+title: 과제 및 기타 저장소
+description: 과제와 연습한 결과물이 올라오는 저장소입니다.
+show_downloads: true
+google_analytics:
+theme: jekyll-theme-midnight
 # 과제 및 기타 저장소
 
 * [우리동작 오픈소스 프로그래밍 03회차](./WRDJClass/03강.html)
