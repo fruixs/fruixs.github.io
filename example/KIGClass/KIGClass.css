@@ -1,0 +1,288 @@
+@charset 'utf-8';
+html {
+    overflow-y: scroll;
+}
+
+strong,
+i,
+em,
+p {
+    font-size: 2.0em;
+    color: white;
+}
+
+strong {
+    color: blueviolet;
+}
+
+.color_id {
+    color: red;
+}
+
+body {
+    background-color: hsla(329, 40%, 89%, 0.904);
+}
+
+.color_id2 {
+    color: blue;
+}
+
+#a1 {
+    color: red;
+    background-color: cadetblue;
+    width: 600px;
+}
+
+#a2 {
+    color: orange;
+    background-color: green;
+    width: 400px;
+}
+
+#a3 {
+    color: yellow;
+    background-color: black;
+    width: 200px;
+}
+
+#a4 {
+    color: green;
+}
+
+#a5 {
+    color: blue;
+}
+
+#a6 {
+    color: navy;
+}
+
+#a7 {
+    color: purple;
+}
+
+.agroup {
+    margin: 30px 30px;
+    font-size: 2.0rem;
+}
+
+.sp1 {
+    background-color: pink;
+    display: block;
+    width: 300px;
+    height: 300px;
+    font-size: 50px;
+}
+
+.sp2 {
+    background-color: cornflowerblue;
+    display: block;
+    opacity: 0.5;
+    width: 200px;
+    height: 200px;
+}
+
+h2 {
+    margin: 25px auto 25px auto;
+    background-color: skyblue;
+    color: rgb(23, 136, 223);
+    border-radius: 100px;
+    text-align: center;
+    width: 800px;
+    height: 50x;
+    font-size: 2.0rem;
+}
+
+h3 {
+    margin: 25px auto 25px auto;
+    padding: 10px;
+    background-color: skyblue;
+    color: rgb(23, 136, 223);
+    border-radius: 100px;
+    text-align: center;
+    width: 400px;
+    height: 50x;
+    font-size: 1.5rem;
+}
+
+.divh2cnt {
+    background-color: skyblue;
+    color: rgb(23, 136, 223);
+    border-radius: 100px;
+    text-align: center;
+    margin: auto auto;
+    width: 1200px;
+    height: 300x;
+    font-size: 2.0rem;
+    padding: auto auto;
+}
+
+.stripebox {
+    width: 400px;
+    height: 300px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.stripebox>div:nth-child(2n) {
+    background-color: white;
+    width: 10px;
+    height: 100%;
+    margin: 0px;
+    display: inline-block;
+    transform: rotate(30deg);
+}
+
+.stripebox>div:nth-child(2n+1) {
+    background-color: black;
+    width: 10px;
+    height: 100%;
+    margin: 0px;
+    display: inline-block;
+    transform: rotate(-30deg);
+}
+
+.rainbow {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    /* clip-path: polygon(50% 0, 0 30%, 50% 100%, 100% 30%); */
+}
+
+.rainbow .red {
+    position: relative;
+    background-color: red;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.rainbow .orange {
+    display: inline-block;
+    background-color: orange;
+    width: 450px;
+    height: 450px;
+    margin: 25px 25px;
+    border-radius: 50%;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.rainbow .yellow {
+    display: inline-block;
+    background-color: yellow;
+    width: 400px;
+    height: 400px;
+    margin: 25px 25px;
+    border-radius: 50%;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.rainbow .green {
+    background-color: green;
+    width: 350px;
+    height: 350px;
+    margin: 25px 25px;
+    border-radius: 50%;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.rainbow .blue {
+    display: inline-block;
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+    margin: 25px 25px;
+    border-radius: 50%;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.rainbow .navy {
+    display: inline-block;
+    background-color: navy;
+    width: 250px;
+    height: 250px;
+    margin: 25px 25px;
+    border-radius: 50%;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.rainbow .purple {
+    display: inline-block;
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    margin: 25px 25px;
+    border-radius: 50%;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.usrmenu>.wrap>ul>li {
+    float: left;
+    list-style: none;
+    font-size: 24pt;
+    position: relative;
+    margin: 10px 30px;
+}
+
+.user>.wrap>ul::after {
+    clear: both;
+}
+
+.usrmenu {
+    position: relative;
+    background-color: azure;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.usrmenu a {
+    color: hotpink;
+    text-decoration: none;
+}
+
+.usrmenu a:hover {
+    color: darkslateblue;
+    text-decoration: underline;
+}
+
+.usrmenu>.wrap>ul>li:hover {
+    border: dotted salmon 1px;
+}
+
+.usrmenu>.wrap>ul>li:hover>ul {
+    position: absolute;
+    top: 100%;
+    left: -40px;
+    display: block;
+    font-size: large;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.usrmenu>.wrap>ul>li>ul {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.usrmenu>.wrap {
+    display: inline-block;
+    width: 90%;
+    height: 300px;
+    margin: 0px auto;
+}
+
+.cpxtable td,
+.cpxtable th {
+    border: solid plum 1px;
+}
+
+.cpxtable {
+    border-collapse: collapse;
+}
+
+.cpxtable th {
+    background-color: lavender;
+}
