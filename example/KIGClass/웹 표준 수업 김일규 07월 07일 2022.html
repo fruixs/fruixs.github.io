@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title> 2022. 06. 03 웹 표준 수업 김일규</title>
+    <link rel="stylesheet" href="./KIGClass.css">
+</head>
+
+<body>
+    <!--  -->
+    <h1>웹 표준 수업 이어서 합니다.</h1>
+    <hr>
+    <h2>문단 태그 P</h2>
+    <p
+        style="background-image:url(https://png.pngtree.com/thumb_back/fh260/background/20190718/pngtree-colorful-lines-cartoon-background-image_109712.jpg);">
+        <!-- em, strong inline tag -->
+        동해물과 <strong>백두산</strong>이 마르고 닳도록 <em class="color_id2">하느님</em>이 보우하사 우리나라 만세
+        동해물과 <strong class="color_id">백두산</strong>이 마르고 닳도록 <em>하느님</em>이 보우하사 우리나라 만세
+        동해물과 <strong>백두산</strong>이 마르고 닳도록 <em>하느님</em>이 보우하사 우리나라 만세
+    </p>
+    <p>
+        동해물과 <i>백두산</i>이 마르고 닳도록 <span style="color:red;">하느님</span>이 보우하사 우리나라 만세
+    </p>
+    <p id="a1">무</p>
+    <p id="a2">궁</p>
+    <p id="a3">화</p>
+    <p id="a4">이</p>
+    <p id="a5">꽃</p>
+    <p id="a6">이</p>
+    <p id="a7">었</p>
+    <p>습니다</p>
+    <h3>응용 과제</h3>
+    <p>빨주노초파남보</p>
+    <span class="agroup" id="a1">무</span>
+    <span class="agroup" id="a2">궁</span>
+    <span class="agroup" id="a3" style="display:block;width:200px;height: 100px;text-align: center;">화</span>
+    <span class="agroup" id="a4">이</span>
+    <span class="agroup" id="a5">꽃</span>
+    <span class="agroup" id="a6">이</span>
+    <span class="agroup" id="a7">었</span>
+    <span class="sp1"><span class="sp2">블라블라</span></span>
+    <h2>웹 표준 수업 가상 영역</h2>
+    <h2>블럭 요소와 div와 span</h2>
+    <div class="divh2cnt">
+        <p>div 태그는 의미없는 block level 태그로서 가상의 영역을 잡을 때 쓴다.</p>
+    </div>
+    <div class="divh2cnt">
+        <p>가상 영역 1</p>
+    </div>
+    <div class="divh2cnt">
+        <p>가상 영역 2</p>
+        <ul> li 요소 특성 테스트
+            <li style="background-color:aquamarine;">민트하다.</li>
+            <li style="background-color:aquamarine;">민트하다.</li>
+        </ul>
+    </div>
+    <h3>박스 모델</h3>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <h3>red box 만들기</h3>
+    <hr>
+    <div class="stripebox">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <h3>응용 과제</h3>
+    <div class="rainbow">
+        <div class="red">
+            <div class="orange">
+                <div class="yellow">
+                    <div class="green">
+                        <div class="blue">
+                            <div class="navy">
+                                <div class="purple">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3>메뉴 만들기</h3>
+    <div class="usrmenu">
+        <div class="wrap">
+            <ul>
+                <li>
+                    <a href="#">메뉴 1</a>
+                    <ul>
+                        <li>메뉴 1의 1</li>
+                        <li>메뉴 1의 2</li>
+                        <li>메뉴 1의 3</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메뉴 2</a>
+                    <ul>
+                        <li>메뉴 2의 1</li>
+                        <li>메뉴 2의 2</li>
+                        <li>메뉴 2의 3</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메뉴 3</a>
+                    <ul>
+                        <li>메뉴 3의 1</li>
+                        <li>메뉴 3의 2</li>
+                        <li>메뉴 3의 3</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메뉴 4</a>
+                    <ul>
+                        <li>메뉴 4의 1</li>
+                        <li>메뉴 4의 2</li>
+                        <li>메뉴 4의 3</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h2>데이터 테이블</h2>
+    <h3>제목 셀의 scope 가 col 인 테이블</h3>
+    <table style="margin:50px auto 50px auto;font-size: x-large;background-color: whitesmoke;">
+        <caption>무슨 테이블인가?</caption>
+        <thead>
+            <tr>
+                <th>강아지</th>
+                <th>고양이</th>
+                <th>물고기</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>푸들</td>
+                <td>슈뢰딩거 공양이</td>
+                <td>잉어</td>
+            </tr>
+            <tr>
+                <td>말티즈</td>
+                <td>검은 고양이 네코</td>
+                <td>금붕어</td>
+            </tr>
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+    <h3>응용 과제</h3>
+    <table class="cpxtable"
+        style="width:80%;border: solid royalblue;text-align:center; padding: 10px;margin:50px auto 50px auto;font-size: x-large;background-color: whitesmoke;">
+        <caption>김포 공항 출발 제주 공항 도착 대체 텍스트</caption>
+        <tr>
+            <th colspan="11">김포 공항 출발 제주 공항 도착</th>
+        </tr>
+        <tr>
+            <th scope="col" rowspan="2">항공사</th>
+            <th scope="col" rowspan="2">기종</th>
+            <th scope="col" colspan="7">요일별 출발 시각</th>
+            <th scope="col" rowspan="2">도착</th>
+            <th scope="col" rowspan="2" colspan="2">운항 기간</th>
+        </tr>
+        <tr>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th>토</th>
+            <th>일</th>
+        </tr>
+
+        <tr>
+            <th rowspan="5" scope="row">아시아나</th>
+        </tr>
+        <tr>
+            <td rowspan="3">ASN-1A</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td rowspan="2">7:20</td>
+            <td>2022-06-30 ~ 2022-07-01</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td rowspan="3">
+                <table style="box-sizing:border-box;width:100%;height:100%;">
+                    <tr>
+                        <td colspan="2">상세 운항 시간</td>
+                    </tr>
+                    <tr>
+                        <td>시작</td>
+                        <td>종료</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2022-07-01</td>
+                        <td>2022-07-02</td>
+                    </tr>
+                    <tr>
+                        <td>2022-07-02</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td rowspan="2">7:40</td>
+        </tr>
+        <tr>
+            <td rowspan="2">ASN-1B</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+        </tr>
+        <!-- <th rowspan="5" scope="row">대한항공</th> -->
+    </table>
+    <h3>응용 과제2</h3>
+    <table
+        style="width:80%;border: solid royalblue;text-align:center; padding: 10px;margin:50px auto 50px auto;font-size: x-large;background-color: whitesmoke;">
+        <tr>
+            <th colspan="8">
+                <span style="color:palevioletred;font-size: 24pt;">6월</span>
+            </th>
+        </tr>
+        <tr>
+            <td></td>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th style="color:blue">토</th>
+            <th style="color:red">일</th>
+        </tr>
+        <tr>
+            <td>1주</td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td style="color:blue">6</td>
+            <td style="color:red">7</td>
+        </tr>
+        <tr>
+            <td>2주</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td style="color:blue">8</td>
+            <td style="color:red">9</td>
+        </tr>
+        <tr>
+            <td>3주</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td style="color:blue">15</td>
+            <td style="color:red">16</td>
+        </tr>
+        <tr>
+            <td>4주</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+            <td style="color:blue">22</td>
+            <td style="color:red">23</td>
+        </tr>
+        <tr>
+            <td>5주</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+            <td style="color:blue">29</td>
+            <td style="color:red">30</td>
+        </tr>
+    </table>
+    <h3>응용 과제3</h3>
+    <!-- 1열 가수, 배우, 개그맨 -->
+    <!-- 2열 남, 여 -->
+    <table class="cpxtable"
+        style="width:80%;border: solid royalblue;text-align:center; padding: 10px;margin:50px auto 50px auto;font-size: x-large;background-color: whitesmoke;">
+        <tr>
+            <th colspan="6"> 방송사 </th>
+        </tr>
+        <tr>
+            <th colspan="3">부문별 연애인</th>
+            <th scope="col">KBS</th>
+            <th scope="col">MBC</th>
+            <th scope="col">SBS</th>
+        </tr>
+        <tr>
+            <th rowspan="4">연애인</th>
+            <th rowspan="2">배우</th>
+            <th>여자</th>
+            <td>나여자 배우1</td>
+            <td>나여자 배우2</td>
+            <td>나여자 배우3</td>
+        </tr>
+        <tr>
+            <th>남자</th>
+            <td>나남자 배우1</td>
+            <td>나남자 배우2</td>
+            <td>나남자 배우3</td>
+        </tr>
+        <tr>
+            <th rowspan="2">가수</th>
+            <th>여자</th>
+            <td>나여자 가수1</td>
+            <td>나여자 가수2</td>
+            <td>나여자 가수3</td>
+        </tr>
+        <tr>
+            <th>남자</th>
+            <td>나남자 가수1</td>
+            <td>나남자 가수2</td>
+            <td>나남자 가수3</td>
+        </tr>
+
+    </table>
+    <h2>종합 응용 과제</h2>
+    <h3>주제 : 이력서 만들기</h3>
+    <a href="./이력서.html">이력서 확인하기</a>
+</body>
+
+</html>
