@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title> 메뉴 만들기 </title>
+    <style>
+        .menu {
+            width:90%;
+            height:10%;
+            border:solid black 1px;
+            margin:30px auto;
+        }
+        .menu>ul {
+            position: relative;
+            width: 50%;
+            /* border:solid black 1px; */
+            margin:0px auto;
+        }
+        .menu>ul>li {
+            float:left;
+            list-style: none;
+            position: relative;
+        }
+        .menu ul ul {
+            position: absolute;
+            top:50%;
+            left:-40px;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+            overflow: hidden;
+        }
+        .menu li:hover>ul {
+            position: absolute;
+            display: block;
+            margin-top: 15px;
+            list-style: none;
+            clip-path: none;
+            width: max-content;
+            height: 100%;
+            overflow: unset;
+        }
+        .menu>ul>li:nth-child(2):hover>ul {
+            position: absolute;
+            display: block;
+            margin-top: 15px;
+            list-style: none;
+            clip-path: none;
+            width: max-content;
+            height: 100%;
+            overflow: unset;
+            overflow-wrap: ;
+        }
+        /* overflow에 unset() 을 주어 지정한 hidden 속성 해제 */
+        /* 아래 내용은 스크린리더의 접근성을 지키면서 디자인을 지키기 위한 trick 이다. */
+        .menu>ul>li:focus-within>ul {
+            display: block;
+            list-style: none;
+            margin-top: 15px;
+            clip-path: none;
+            width: 200%;
+            height: 100%;
+            overflow: unset;
+        }
+        .menu>ul>li>span {
+            color:palevioletred;
+            font-size: larger;
+        }
+        .menu>ul>li:first-child {
+            margin-right: 50px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        .menu>ul>li:last-child {
+            margin-left: 50px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        /* floating 하면 부모 요소가 inline-block 으로 인식된다. */
+        /* 따라서 아래처럼 적용해야 가로 세로를 인식하는 블럭 요소가 된다. */
+        .menu>ul::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .menu>h1,p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <h1>CSS로 만든 2차 메뉴</h1>
+        <p>CSS의 'focus-within'을 사용하여 메뉴 펼침과 닫힘 구현</p>
+        <ul>
+            <li><a href="#">메뉴 1</a>
+                <ul>
+                    <li><a href="#">메뉴 1의 1</a></li>
+                    <li><a href="#">메뉴 1의 2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메뉴 2</a>
+                <ul>
+                    <li><a href="#">메뉴 2의 1</a></li>
+                    <li><a href="#">메뉴 2의 2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
