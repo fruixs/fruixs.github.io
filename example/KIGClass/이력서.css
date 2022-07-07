@@ -106,11 +106,13 @@ div.wraper>.content>.profile_cnt>.flexbox {
     }
 }
 div.wraper>.content>.profile_cnt>.flexbox>.leftbox {
-    flex: 1;
+    flex: 1 1 0;
+	/* flex-grow: 1; flex-shrink: 1; flex-basis: auto; */
     min-width: 350px;
 }
 div.wraper>.content>.profile_cnt>.flexbox>.rightbox {
-    flex: 1;
+    flex: 1 1 0;
+    /* flex-grow: 1; flex-shrink: 1; flex-basis: auto; */
     min-width: 350px;
 }
 
@@ -120,7 +122,6 @@ div.wraper>.content>.profile_cnt>.flexbox>.leftbox>.exp ul {
 
 div.wraper>.content>.profile_cnt>.flexbox>.rightbox {
     margin-right: 0.75%;
-    align-items: center;
 }
 
 div.wraper>.content>.profile_cnt>.flexbox>.rightbox>.exp ul {
