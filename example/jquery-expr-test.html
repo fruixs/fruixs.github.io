@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery expr method example</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+<div>aWeSome tExt</div>
+<script>
+
+    // An implementation of a case-insensitive contains pseudo
+    // made for all versions of jQuery
+    (function ($) {
+
+        function icontains(elem, text) {
+            return (
+                elem.textContent ||
+                elem.innerText ||
+                $(elem).text() ||
+                ""
+            ).toLowerCase().indexOf((text || "").toLowerCase()) > -1;
+        }
+        // 현재는 최신 버전이므로 삼항 연산자 중 첫 번째 항목으로 실행함
+        $.expr[':'].icontains = $.expr.createPseudo ?
+            $.expr.createPseudo(function (text) {
+                return function (elem) {
+                    return icontains(elem, text);
+                };
+            }) :
+            function (elem, i, match) {
+                console.log("what is", match);
+                return icontains(elem, match[3]);
+            };
+
+    })(jQuery); 
+
+    console.log(jQuery("div:icontains(aWeSome tExt)").length);
+    console.log(jQuery("div:icontains(awesome text)").length);
+    console.log(jQuery("div:icontains(AWESOME TEXT)").length);
+</script>
+</body>
+
+</html>
