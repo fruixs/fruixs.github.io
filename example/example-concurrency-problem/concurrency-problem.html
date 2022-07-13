@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>concurrency problem</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 동시성 문제 해결 자바스크립트 코드 -->
+    <div class="container">
+        <div class="contents">
+            <div class="havbutton">
+                <div class="top">
+                    <button type="button">라면추가</button>
+                </div>
+                <div class="middle">
+                    <p class="description">자바스크립트 비동기 처리의 동시성 문제를 해결하는 라면집입니다.</p>
+                </div>
+                <div class="bottom">
+                    <span class="description">접수&nbsp;</span>
+                    <span id="number-person" class="description">0</span>
+                    <span class="description">번</span>
+                    <br>
+                    <span class="description">대기&nbsp;</span>
+                    <span id="number-delay-person" class="description">0</span>
+                    <span class="description">명</span>
+                    <br>
+                    <span class="description">완료&nbsp;</span>
+                    <span id="number-ok-person" class="description">0</span>
+                    <span class="description">명</span>
+                </div>
+            </div>
+            <div class="status">
+                <!-- <p>🍜</p> -->
+                <!-- <p>✅</p> -->
+                <!-- <p>♨</p> -->
+                <!-- <p>🍜</p> -->
+            </div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener("load", function () {
+            let ramenObject = {
+                statusDiv: document.querySelector(".container>.contents .status"),
+                nodePerson: document.getElementById("number-person"),
+                nodeDelayPerson: document.getElementById("number-delay-person"),
+                nodeOkPerson: document.getElementById("number-ok-person"),
+                numberPerson: 0,
+                numberOkPerson: 0,
+                numberDelayPerson: 0,
+                arrayDelayPerson: [],
+                button: document.querySelector(".container>.contents button"),
+                ramenCounter: 1,
+                isLock: false,
+                init() {
+                    this.addMessageRamen = this.addMessageRamen.bind(this);
+                    // this.ramenP = this.ramenP.bind(this);
+                },
+                ramenP() {
+                    // 잠금해제
+                    this.isLock = false;
+                    // console.log("ramenP 의 this ", this)
+                    
+                    let pNode = document.createElement("p");
+                    pNode.append(document.createTextNode(`🍜 ${this.ramenCounter}번째 손님 주문 완료`))
+                    this.statusDiv.append(pNode);
+                    this.nodePerson.innerText = this.ramenCounter++;
+                    this.nodeDelayPerson.innerText = --this.numberDelayPerson;
+                    this.nodeOkPerson.innerText = ++this.numberOkPerson;
+                    if(this.arrayDelayPerson.length > 0) {
+                        this.arrayDelayPerson.shift()();
+                        this.nodeDelayPerson.innerText = --this.numberDelayPerson;
+                    } else {
+                        this.numberDelayPerson = 0;
+                    }
+                },
+
+                addMessageRamen() {
+                    /* arguments.callee 이용하여 n번째 주문에 (n+1)번째 주문으로 나타나는 오류방지 필요 */
+                    if (!this.isLock) {
+                        this.isLock = true;
+                        let pNode = document.createElement("p");
+                        let textNode = document.createTextNode(`✅ ${this.ramenCounter}번째 손님 주문 확인`);
+                        pNode.append(textNode);
+                        this.statusDiv.append(pNode);
+                        console.log("addMessageRamen 의 this", this)
+
+                        this.nodePerson.innerText = this.ramenCounter;
+                        this.nodeDelayPerson.innerText = ++this.numberDelayPerson;
+                        // Arrow function 에 의해 ramenP 는 lexical 로 addMessageRamen scope 의 this를 바인딩한다.
+                        setTimeout(() => this.ramenP(), 2000)
+                        console.log(this.nodePerson.childNodes.length);
+                    } else {
+                        /* isLock = true 가 되어 대기하는 인원 */
+                        /* 
+                        arguments.callee 가 Eventlistener 에서 건낸 this 로 설정되어 있어
+                        arguments.callee.bind 로 임의 지정한 this 갖는 함수를 배열에 넣음
+                        */
+                        this.numberDelayPerson++
+                        this.nodeDelayPerson.innerText = this.numberDelayPerson;
+                        this.arrayDelayPerson.push(arguments.callee.bind(this))
+                    }
+                }
+            }
+            ramenObject.init();
+            ramenObject.button.addEventListener("click", ramenObject.addMessageRamen)
+        })
+    </script>
+</body>
+
+</html>
