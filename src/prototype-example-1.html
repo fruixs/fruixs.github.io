@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype example 1</title>
+</head>
+
+<body>
+    <script>
+        /* prototype link 내부 에서 생성함 */
+        function bmw(color = "") {
+            const car = {
+                wheel: "default wheel",
+                drive: function () {
+                    console.log("drive...")
+                }
+            }
+            this.__proto__ = car;
+            this.color = color;
+        }
+        console.log((new bmw()).wheel);
+    </script>
+</body>
+
+</html>
