@@ -1,0 +1,49 @@
+﻿body{
+padding:0 auto;
+margin:0 auto;
+width:780px;
+height:768px;
+font-size:12pt;
+}
+
+ul {
+list-style:none;
+line-height:22pt;
+font-weight:bold;
+}
+
+ol {
+line-height:22pt;
+font-weight:bold;
+}
+
+table{
+border-collapse:collapse;
+}
+
+th{
+background:#becdff;
+}
+
+td,th {
+padding-left:10pt;
+padding-right:10pt
+}
+
+a{
+text-decoration:none
+}
+
+a:visited{
+color:blue;
+}
+
+li a:hover {
+color:green;
+font-size:18pt;
+text-decoration:underline;
+line-height:25pt;
+}
+
+.ht {padding-left:30pt}
+.chplist {background:#e3e3f3}
