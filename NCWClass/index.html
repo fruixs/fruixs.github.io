@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 웹표준 수업 </title>
     <link rel="stylesheet" href="./asset/css/default.css">
+    <script type="text/javascript" defer src="./asset/js/index.js"></script>
 </head>
 
 <body>
@@ -18,10 +19,20 @@
         <h1> 웹표준 수업 </h1>
         <nav id="nav">
             <ul>
-                <li><a href="./sensereader/chapter8.html"> 센스리더 기능키 안내 </a></li>
-                <li><a href="./NVDA/keyCommands.html"> NVDA 기능키 안내</a></li>
-                <li><a href="./chrome/chromekey.html"> Chrome 기능키 안내</a></li>
-                <li><a href="./007_wai-aria/aria/waiaria.html"> WAI-ARIA 기능키 안내</a></li>
+                <li><a href="./sensereader/chapter8.html">센스리더 기능키 안내 </a></li>
+                <li><a href="./NVDA/keyCommands.html">NVDA 기능키 안내</a></li>
+                <li><a href="./chrome/chromekey.html">Chrome 기능키 안내</a></li>
+                <li>
+                    <a href="./007_wai-aria/aria/waiaria.html">WAI-ARIA 기능키 안내</a>
+                    <button onclick="menu(`menu1`)" aria-label="WAI-ARIA 더보기" aria-controls="menu1" aria-haspopup="true" aria-expanded="false">+</button>
+                    <ul id="menu1" aria-label="WAI-ARIA 더보기" role="menu">
+                        <li role="none"><a role="menuitem" href="./007_wai-aria/aria/waiaria.html">dddd</a></li>
+                        <li role="none"><a role="menuitem" href="./007_wai-aria/aria/waiaria.html">ddd</a></li>
+                        <li role="none"><a role="menuitem" href="./007_wai-aria/aria/waiaria.html">dd</a></li>
+                        <li role="none"><a role="menuitem" href="./007_wai-aria/aria/waiaria.html">d</a></li>
+                    </ul>
+                    
+                </li>
             </ul>
         </nav>
     </header>

@@ -42,6 +42,17 @@ display: inline-block;
 padding: 5px 20px;
 }
 
+header button {
+    vertical-align: text-bottom;
+    font-size: 1rem;
+    color:#ff7062;
+    border: #6768ab solid 1px;
+}
+
+header ul #menu1 {
+    display: none;
+}
+
 main h2 {
     height: auto;
     font-size: 1.5rem;
