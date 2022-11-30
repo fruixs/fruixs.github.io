@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 웹표준 수업 </title>
     <link rel="stylesheet" href="./asset/css/default.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.js"
-        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
+    <!-- 
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
+
+    -->
     <script defer src="./asset/js/menubar.js"></script>
     <!-- <script defer src="./asset/js/index.js"></script> -->
 </head>
@@ -27,9 +27,10 @@
     <header>
         <h1> 웹표준 수업 </h1>
         <nav id="nav">
-            <ul role="menubar" class="menubar-navigation">
+            <ul role="menubar" aria-label="정보 접근성 웹표준 수업" class="menubar-navigation">
                 <li role="none">
-                    <a role="menuitem" aria-haspopup="true" aria-expanded="false" href="./007_wai-aria/aria/waiaria.html">Accessibility and etc</a>
+                    <a role="menuitem" aria-haspopup="true" aria-expanded="false" href="#menu1">Accessibility and
+                        etc</a>
                     <ul role="menu" id="menu1" aria-label="보조기술 및 기타 단축키">
                         <li role="none"><a role="menuitem" href="./sensereader/chapter8.html">센스리더 기능키 안내 </a></li>
                         <li role="none"><a role="menuitem" href="./NVDA/keyCommands.html">NVDA 기능키 안내</a></li>
@@ -37,9 +38,7 @@
                     </ul>
                 </li>
                 <li role="none">
-                    <a role="menuitem" aria-haspopup="true" aria-expanded="false" href="./007_wai-aria/aria/waiaria.html">
-                        ARIA Authorizing Practice
-                    </a>
+                    <a role="menuitem" aria-haspopup="true" aria-expanded="false" href="#menu2">ARIA Authorizing Practice</a>
                     <ul roel="menu" id="menu2" aria-label="ARIA Authorizing Practice">
                         <li role="none"><a role="menuitem" href="./WAI-ARIA/menubar.html">메뉴바</a></li>
                         <li role="none"><a role="menuitem" href="./WAI-ARIA/tabs.html">탭</a></li>
@@ -79,26 +78,15 @@
         <p>https://juahnpop.tistory.com/298</p>
         <p>https://webgradients.com/</p>
     </footer>
+    <script>
+        window.addEventListener('load', function () {
+            var menubarNavs = document.querySelectorAll('.menubar-navigation');
+            for (var i = 0; i < menubarNavs.length; i++) {
+                console.log(new MenubarNavigation(menubarNavs[i]));
+            }
+        });
+    
+    </script>
 </body>
-<noscript>
-    $("nav > ul > li").on("keyup mouseenter",function(e) {
-    if(e.key === "enter") {
-    $(this).children("ul").addClass("on")
-    }
-    })
-
-    $("nav > ul > li").on("focusout mouseleave",function(e) {
-
-    $(this).children("ul").removeClass("on")
-    })
-</noscript>
-<script>
-    window.addEventListener('load', function () {
-        var menubarNavs = document.querySelectorAll('.menubar-navigation');
-        for (var i = 0; i < menubarNavs.length; i++) {
-            console.log(new MenubarNavigation(menubarNavs[i]));
-        }
-    });
-</script>
 
 </html>
