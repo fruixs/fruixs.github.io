@@ -1,0 +1,97 @@
+body {
+	margin: 0 auto;
+	font: 100%/1.5 Verdana, sans-Serif;
+	color: #fff;
+	background: #eee;
+}
+p, li {
+	font-size: 0.9em;
+}
+li pre { display: inline; }
+li { font-size: 10px; }
+.nav,
+.nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Top level nav */
+.nav {
+  width: 100%;
+	float: left;
+	margin: 0px 0;
+	background: #BDD7F2;
+}
+
+/* Dropdowns */
+.nav ul {
+	position: absolute;
+	top: 3.45em;
+	left: -9999px;
+	opacity: 0;
+	-webkit-transition: 0.1s linear opacity;
+	min-width: 250px;
+	background: #BDD7F2;
+}
+
+.nav li {
+	float: left;
+	position: relative;
+}
+
+/* Top level nav items */
+.nav li > a {
+	float: left;
+	padding: 8px 15px;
+	border-left: 1px solid rgba(255,255,255,0.4);
+	border-right: 1px solid rgba(0,0,0,0.2);
+	color: #003B7A;
+	font-weight: bold;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+/* Top level hover state, preserve hover state when hovering dropdown  */
+.nav li > a:hover,
+.nav li > a:focus,
+.nav li:focus > a,
+.nav li:hover > a {
+	background: #0C5CB3;
+  color: #FFFFFF;
+	outline: 0;
+}
+
+/* first top level nav item */
+.nav li:hover ul,
+.nav li:focus ul,
+ul.show-menu {
+	left: 0;
+	opacity: 0.99;
+}
+
+.nav ul li {
+	float: none;
+	position: static;
+}
+
+/* pop out menu */
+.nav ul a {
+	float: none;
+	display: block;
+	color: #003B7A;
+	font-size: 1em;
+	text-shadow: none;
+	border: 1px solid #3A6BA1;
+	border-width: 0 0 1px;
+	-webkit-transition: 0.1s left: ;inear all;
+}
+.nav ul a:hover,
+.nav ul a:focus {
+	background: #0C5CB3;
+	color: #FFFFFF;
+	text-shadow: none;
+}
+
+
+p { clear: both; }

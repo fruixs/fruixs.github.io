@@ -717,7 +717,7 @@ class MenubarNavigation {
     }
     
     event.stopPropagation();
-    event.preventDefault();
+    //event.preventDefault();
   }
 
   onMenuitemPointerover(event) {
