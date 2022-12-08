@@ -15,7 +15,7 @@ $.fn.setup_navigation = function(settings) {
 	}, settings);
 	
 	// Add ARIA role to menubar and menu items
-	$(this).attr('role', 'menubar').find('li').attr('role', 'menuitem');
+	$(this).attr('role', 'menubar').find('li>a').attr('role', 'menuitem');
 	
 	var top_level_links = $(this).find('> li > a');
 	
