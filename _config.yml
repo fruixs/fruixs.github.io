@@ -1,7 +1,7 @@
 remote_theme: pages-themes/midnight@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
-title: [하진's github 저장소]
+title: [마왕성 어느 곳]
 description: [작업한 결과물 또는 연습하는 코드가 올라 옵니다.]
 show_downloads: true
 google_analytics: [G-CGBP3E2BV2]
